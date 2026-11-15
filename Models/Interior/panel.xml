@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+	<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>150</max-m>
+    </animation>
+	
+ <!--sticks  n pedals
+  
+ <model>
+ <name>cyclic</name>
+		<path>Aircraft/AS350/Models/cyclic.xml</path>
+		<offsets>
+			  <x-m> -4.57</x-m>
+     <y-m>  0.3 </y-m>
+      <z-m>  -0.79 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+	
+	</model>
+	
+	 <model>
+ <name>collective</name>
+		<path>Aircraft/AS350/Models/collective.xml</path>
+		<offsets>
+			  <x-m> -4.12</x-m>
+     <y-m>  0.075 </y-m>
+      <z-m>  -0.78 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+	
+	</model>
+	
+	 <model>
+ <name>pedals</name>
+		<path>Aircraft/AS350/Models/pedals.xml</path>
+		<offsets>
+			  <x-m> -4.97</x-m>
+     <y-m>  0.3 </y-m>
+      <z-m>  -0.81 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+	
+	</model>-->
+	
+	
+  
+  <!-- Main panel -->
+  
+  <model>
+  <name>panel</name>
+		<path>Aircraft/EC-120/Models/Interior/dash.xml</path>
+		<offsets>
+			  <x-m>-2</x-m>
+     <y-m>0</y-m>
+      <z-m>-0.7</z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+	
+	</model>
+  
+  
+  <!-- panel vibration experiment -->
+ <animation>
+    <type>translate</type>
+    <object-name>panel</object-name>
+   <condition>
+				<greater-than>
+					<property>sim/sound/vibration</property>
+					<value>0.05</value>
+				</greater-than>
+			</condition>
+    <factor>100</factor>
+    <axis>
+      <x> 1 </x>
+      <y> -1 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>panel</object-name>
+    <property>rotors/main/vibration/longitudinal</property>
+    <factor>0.0015</factor>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+ <animation>
+    <type>translate</type>
+    <object-name>panel</object-name>
+    <property>rotors/main/vibration/lateral</property>
+    <factor>0.0025</factor>
+    <axis>
+      <x> 0 </x>
+      <y> -1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+ 
+ 
+
+
+</PropertyList>
+

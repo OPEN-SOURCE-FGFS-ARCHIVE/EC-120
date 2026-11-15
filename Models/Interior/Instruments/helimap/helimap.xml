@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<path>helimap.ac</path>
+	
+	<model>
+		<name>map1</name>
+		<path>Aircraft/EC-120/Models/Interior/Instruments/fg1000/GDU-1040.2.xml</path>
+		<offsets>
+			<x-m>0.00</x-m>
+			<y-m>0</y-m>
+			<z-m>-0.005</z-m>
+			<!--<pitch-deg>-90</pitch-deg>-->
+		</offsets>
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1</x-offset>
+    <y-offset>0.65</y-offset>
+    <z-offset>0.93</z-offset>
+   </animation>
+  </overlay>
+	</model>
+	
+	
+	 <animation>
+        <type>select</type>
+<object-name>map1</object-name>	
+
+<condition>
+					<or>
+				
+				<equals>
+				<property>controls/electric/directbat-switch</property>
+				<value>true</value>
+				</equals>
+			
+				<equals>
+				<property>controls/electric/engine/generator</property>
+				<value>true</value>
+				</equals>
+				
+				
+		        
+				</or>
+				
+			</condition>
+
+    </animation>
+
+</PropertyList>

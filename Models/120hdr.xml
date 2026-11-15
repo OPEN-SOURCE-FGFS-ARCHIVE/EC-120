@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+
+<!-- Eurocopter AS350 Helicopter by Heiko Schulz, animation set -->
+
+<PropertyList>
+
+
+	<path>ec120-fuselage.ac</path>
+	
+
+ 
+
+
+  
+	
+	
+	
+	 <!-- Solid Surfaces for Rembrandt rendering -->
+   <animation>
+    
+   <object-name>main</object-name>
+    <object-name>h_stab</object-name>
+    <object-name>hockeyStick</object-name>
+    <object-name>rect</object-name>
+    <object-name>boomHandles</object-name>
+	<object-name>topRearFairing</object-name>
+	<object-name>exhaustEXT</object-name>
+	<object-name>taiRotorCoverPort</object-name>
+	<object-name>skidFairings</object-name>
+	<object-name>steps</object-name>
+	<object-name>skidsFront</object-name>
+	<object-name>skidRears</object-name>
+	 <object-name>skidsRear</object-name>
+
+<object-name>skidFairings</object-name>
+	<object-name>skidFairingsFwd</object-name>
+	<object-name>doorPortRear</object-name>
+	 <object-name>doorPortFront</object-name>	 
+	 
+	 <object-name>doorStbdRear</object-name>
+	 <object-name>doorStbdFront</object-name>	
+	 <object-name>fenestron-opening</object-name>
+	 <object-name>strutNose</object-name>	
+    </animation>	
+	
+<effect>
+    <inherits-from>Aircraft/EC-120/Models/Effects/reflect-uber</inherits-from>
+  <object-name>main</object-name>
+    <object-name>h_stab</object-name>
+    <object-name>hockeyStick</object-name>
+    <object-name>rect</object-name>
+    <object-name>boomHandles</object-name>
+	<object-name>topRearFairing</object-name>
+	<object-name>exhaustEXT</object-name>
+	<object-name>taiRotorCoverPort</object-name>
+	<object-name>skidFairings</object-name>
+	<object-name>steps</object-name>
+	<object-name>skidsFront</object-name>
+	<object-name>skidRears</object-name>
+	 <object-name>skidsRear</object-name>
+ <object-name>wc1</object-name>
+    <object-name>wc2</object-name>
+		  <object-name>wc3</object-name>
+    <object-name>wc4</object-name>
+<object-name>skidFairings</object-name>
+	<object-name>skidFairingsFwd</object-name>
+	<object-name>doorPortRear</object-name>
+	 <object-name>doorPortFront</object-name>	 
+	  <object-name>turretbase</object-name>
+	 <object-name>doorStbdRear</object-name>
+	 <object-name>doorStbdFront</object-name>	
+	 <object-name>fenestron-opening</object-name>
+	 <object-name>strutNose</object-name>
+  </effect>
+
+
+	 <!-- rembrandt auto switching for glass -->
+ 
+ <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+
+		
+		<object-name>blurred</object-name>
+		<object-name>propblur</object-name>
+		<object-name>propdisc</object-name>
+</effect>
+	
+  <effect>
+		<inherits-from>Aircraft/EC-120/Models/Effects/glassout</inherits-from>
+		<object-name>perspexFront</object-name>
+		<object-name>perspexPortFront</object-name>
+		<object-name>perspexPortRear</object-name>
+		<object-name>perspexTop</object-name>
+		<object-name>perspexStbdFront</object-name>
+		<object-name>perspexStbdRear</object-name>
+		<object-name>perspexStbdMid</object-name>
+</effect>
+
+<animation>     
+	 <type>select</type>
+     <object-name>perspexFront</object-name>
+		<object-name>perspexPortFront</object-name>
+		<object-name>perspexPortRear</object-name>
+		<object-name>perspexTop</object-name>
+		<object-name>perspexStbdFront</object-name>
+		<object-name>perspexStbdRear</object-name>
+		<object-name>perspexStbdMid</object-name>
+		<condition>
+            <not>
+            <property>sim/current-view/internal</property>
+            </not>
+        </condition>
+    </animation>
+
+
+
+ <effect>
+  <inherits-from>Effects/glass</inherits-from>
+ <object-name>perspexFrontin</object-name>
+		<object-name>perspexPortFrontin</object-name>
+		<object-name>perspexPortRearin</object-name>
+		<object-name>perspexTopin</object-name>
+		<object-name>perspexStbdFrontin</object-name>
+		<object-name>perspexStbdRearin</object-name>
+		<object-name>perspexStbdMidin</object-name>
+
+</effect>
+
+
+<animation>     
+	 <type>select</type>
+    <object-name>perspexFrontin</object-name>
+		<object-name>perspexPortFrontin</object-name>
+		<object-name>perspexPortRearin</object-name>
+		<object-name>perspexTopin</object-name>
+		<object-name>perspexStbdFrontin</object-name>
+		<object-name>perspexStbdRearin</object-name>
+		<object-name>perspexStbdMidin</object-name>
+		<condition>
+           
+            <property>sim/current-view/internal</property>
+            
+        </condition>
+    </animation>
+
+
+<!-- tail -->
+
+ <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+       
+		<object-name>disk1</object-name>
+    </effect> 
+
+
+		
+<animation>
+	<type>material</type>
+	 <object-name>rect1</object-name>
+		
+		 <object-name>rect2</object-name>
+		
+		 <object-name>rect3</object-name>
+		
+		 <object-name>rect4</object-name>
+		
+		 <object-name>rect5</object-name>
+		
+		 <object-name>rect6</object-name>
+		
+		 <object-name>rect7</object-name>
+		
+		 <object-name>rect8</object-name>
+		<transparency>
+			<alpha-prop>rotors/tail/rpm</alpha-prop>
+			<factor>-0.0045</factor>
+			<offset>1</offset>
+			<max>1</max>
+		</transparency>
+    </animation>
+  
+ <animation>
+	<type>material</type>
+	 <object-name>disk1</object-name>
+		
+		<transparency>
+			<alpha-prop>rotors/tail/rpm</alpha-prop>
+			<factor>0.016</factor>
+			<offset>-0.25</offset>
+			<max>0.4</max>
+		</transparency>
+		<threshold>0.001</threshold>
+    </animation>	
+
+	
+
+</PropertyList>

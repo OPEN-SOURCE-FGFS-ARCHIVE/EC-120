@@ -1,0 +1,1294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>175</max-m>
+  </animation>
+
+  <!-- panel lights -->
+  <animation>
+    <type>material</type>
+    <object-name>ball_AI_main</object-name>
+    <object-name>aircraft</object-name>
+    <object-name>needle.glideslope</object-name>
+    <object-name>needle.localiser</object-name>
+    <object-name>AI-face</object-name>
+    <object-name>roll-pointer</object-name>
+    <object-name>GS-pointer</object-name>
+    <object-name>ASIfase</object-name>
+    <object-name>needle_ASI</object-name>
+    <object-name>ALTface</object-name>
+    <object-name>needle_Alt1</object-name>
+    <object-name>needle_Alt2</object-name>
+    <object-name>VSIface</object-name>
+    <object-name>needle_VSI</object-name>
+    <object-name>clockFrameface</object-name>
+    <object-name>SecondHand</object-name>
+    <object-name>MinuteHand</object-name>
+    <object-name>HourHand</object-name>
+    <object-name>frameface</object-name>
+    <object-name>GSneedle</object-name>
+    <object-name>flag_NAV</object-name>
+    <object-name>pointer_Course</object-name>
+    <object-name>VOR_LOC_RNAV-bar</object-name>
+    <object-name>To-flag</object-name>
+    <object-name>From-flag</object-name>
+    <object-name>aircraftSymbol</object-name>
+    <object-name>bug_Heading</object-name>
+    <object-name>diskHeading</object-name>
+    <object-name>backPlate</object-name>
+    <object-name>knob_CourseSelect_OBS</object-name>
+    <object-name>knob_HeadingSelect</object-name>
+    <condition>
+      <property>controls/lighting/instrument-lights</property>
+    </condition>
+    <emission>
+      <red>   0.80 </red>
+      <green> 0.50 </green>
+      <blue>  0.50 </blue>
+    </emission>
+  </animation>
+
+  <!--  -->
+
+  <model>
+    <path>Aircraft/EC-120/Models/Interior/panel.ac</path>
+    <offsets>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0 </z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+  </model>
+  <animation>
+    <object-name>needle_ASI</object-name>
+    <object-name>needle_VSI</object-name>
+    <object-name>needle_Alt1</object-name>
+    <object-name>needle_Alt2</object-name>
+    <object-name>HourHand</object-name>
+    <object-name>MinuteHand</object-name>
+    <object-name>SecondHand</object-name>
+    <object-name>ball_AI_main</object-name>
+    <object-name>roll-pointer</object-name>
+    <object-name>diskHeading</object-name>
+    <object-name>bug_Heading</object-name>
+    <object-name>pointer_Course</object-name>
+  </animation>
+
+  <!-- -2.182	0.117	-0.142                                   ASI / Air Speed Indicator -->
+  <animation>
+    <type>rotate</type>
+    <object-name>needle_ASI</object-name>
+    <property>/instrumentation/airspeed-indicator/indicated-speed-kt</property>
+    <interpolation>
+      <entry>
+        <ind> -999 </ind>
+        <dep>   0 </dep>
+      </entry>
+      <entry>
+        <ind>    0 </ind>
+        <dep>   0 </dep>
+      </entry>
+      <entry>
+        <ind>   30 </ind>
+        <dep>  30 </dep>
+      </entry>
+      <entry>
+        <ind>   60 </ind>
+        <dep>  85 </dep>
+      </entry>
+      <entry>
+        <ind>  120 </ind>
+        <dep> 192 </dep>
+      </entry>
+      <entry>
+        <ind>  200 </ind>
+        <dep> 335 </dep>
+      </entry>
+      <entry>
+        <ind>  999 </ind>
+        <dep> 336 </dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>0.000</x-m>      <!-- back -->
+      <y-m>0.142</y-m>      <!-- right -->
+      <z-m>0.117</z-m>      <!-- up -->
+    </center>
+    <axis>
+      <x> -1 </x>      <!--  roll -->
+      <y>  0 </y>      <!-- pitch -->
+      <z>  0 </z>      <!--   yaw -->
+    </axis>
+  </animation>  <!--                                                end of animation ASI -->
+
+  <!-- -2.213 0.103 -0.229                  AI / Attitude Indicator / Artificial Horizon -->
+  <animation>
+    <type>rotate</type>
+    <object-name>ball_AI_main</object-name>
+    <property>/orientation/roll-deg</property>
+    <factor>1</factor>
+    <center>
+      <x-m>0.000</x-m>
+      <y-m>0.229</y-m>      <!-- right -->
+      <z-m>0.103</z-m>      <!-- up -->
+    </center>
+    <axis>
+      <x> 1 </x>      <!--  roll -->
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>ball_AI_main</object-name>
+    <property>/orientation/pitch-deg</property>
+    <factor>1</factor>
+    <center>
+      <x-m> -2.213 </x-m>      <!-- back -->
+      <y-m>  0.000 </y-m>
+      <z-m>  0.103 </z-m>      <!-- up -->
+    </center>
+    <axis>
+      <x>0</x>
+      <y>1</y>      <!-- pitch -->
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>roll-pointer</object-name>
+    <property>/orientation/roll-deg</property>
+    <factor>1</factor>
+    <center>
+      <x-m>0.000</x-m>
+      <y-m>0.229</y-m>      <!-- right -->
+      <z-m>0.103</z-m>      <!-- up -->
+    </center>
+    <axis>
+      <x> 1 </x>      <!--  roll -->
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>  <!--                                                end of animation AHI -->
+
+  <!--       rotationVSI	-2.182	 0.042	-0.312          VSI / Vertical Speed Indicator -->
+  <animation>
+    <type>rotate</type>
+    <object-name>needle_VSI</object-name>
+    <property>instrumentation/vertical-speed-indicator/indicated-speed-fpm</property>
+    <interpolation>
+      <entry>
+        <ind> -2500 </ind>
+        <dep>  -165 </dep>
+      </entry>
+      <entry>
+        <ind> -2000 </ind>
+        <dep>  -142 </dep>
+      </entry>
+      <entry>
+        <ind> -1500 </ind>
+        <dep> -110 </dep>
+      </entry>
+      <entry>
+        <ind> -1000 </ind>
+        <dep>  -82 </dep>
+      </entry>
+      <entry>
+        <ind>  -500 </ind>
+        <dep>  -40 </dep>
+      </entry>
+      <entry>
+        <ind>     0 </ind>
+        <dep>    0 </dep>
+      </entry>
+      <entry>
+        <ind>   500 </ind>
+        <dep>   40 </dep>
+      </entry>
+      <entry>
+        <ind>  1000 </ind>
+        <dep>   82 </dep>
+      </entry>
+      <entry>
+        <ind>  1500 </ind>
+        <dep>  110 </dep>
+      </entry>
+      <entry>
+        <ind>  2000 </ind>
+        <dep>  142 </dep>
+      </entry>
+      <entry>
+        <ind>  2500 </ind>
+        <dep>  165 </dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>0.000</x-m>      <!-- back -->
+      <y-m>0.312</y-m>      <!-- right -->
+      <z-m>0.042</z-m>      <!-- up -->
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>  <!--                                                end of animation VSI -->
+
+  <!--  rotationAlt	-2.188	 0.116	-0.312                           Altimeter Needles -->
+  <animation>
+    <type>rotate</type>
+    <object-name>needle_Alt1</object-name>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
+    <factor>0.36</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0.312</y-m>      <!-- right -->
+      <z-m>0.116</z-m>      <!-- up -->
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>needle_Alt2</object-name>
+    <property>instrumentation/altimeter/indicated-altitude-ft</property>
+    <factor>0.036</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0.312</y-m>      <!-- right -->
+      <z-m>0.116</z-m>      <!-- up -->
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>  <!--                                           end of animation Altimeter -->
+
+  <!--    -2.183	-0.031	-0.142                                                  Clock  -->
+  <animation>
+    <type>rotate</type>
+    <object-name>HourHand</object-name>
+    <property>instrumentation/clock/indicated-sec</property>
+    <factor>0.00833333333333333</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0.142</y-m>      <!-- right -->
+      <z-m>-0.031</z-m>      <!-- up -->
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>MinuteHand</object-name>
+    <property>instrumentation/clock/indicated-sec</property>
+    <factor>0.1</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0.142</y-m>      <!-- right -->
+      <z-m>-0.031</z-m>      <!-- up -->
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+  <animation>
+    <type>rotate</type>
+    <object-name>SecondHand</object-name>
+    <property>instrumentation/clock/indicated-sec</property>
+    <factor>6</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0.142</y-m>      <!-- right -->
+      <z-m>-0.031</z-m>      <!-- up -->
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>  <!--                                           end of animation Clock  -->
+
+  <!--  -2.188	 0.001	-0.230                          DI / DG / Gyro Compass (KI252) 
+  <animation>
+    <type>rotate</type>
+    <object-name>diskHeading</object-name>
+    <condition>
+      <greater-than>
+        <property>/engines/engine/n1-rpm</property>
+        <value>35000</value>
+      </greater-than>
+    </condition>
+    <property>instrumentation/heading-indicator/indicated-heading-deg</property>
+    <factor>1</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0.230</y-m>     
+      <z-m>0.001</z-m>      
+    </center>
+    <axis>
+      <x>1</x>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>pointer_Course</object-name>
+    <property>instrumentation/heading-indicator/heading-bug-error-deg</property>
+    <factor>1</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0.230</y-m>     
+      <z-m>0.001</z-m>      
+    </center>
+    <axis>
+      <x>-1</x>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>bug_Heading</object-name>
+    <property>/autopilot/internal/heading-bug-error-deg</property>
+    <factor>1</factor>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0.230</y-m>     
+      <z-m>0.001</z-m>      
+    </center>
+    <axis>
+      <x>-1</x>
+    </axis>
+  </animation> --> <!--                       end of animation DI / DG / Gyro Compass (KI252) -->
+
+  <!-- Main panel instruments -->
+  <model>
+    <path>Aircraft/EC-120/Models/Interior/Instruments/VEMD/vemd.xml</path>
+    <offsets>
+      <x-m>-2.19</x-m>
+      <y-m>0.005</y-m>
+      <z-m>0.127 </z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset>1</x-offset>
+        <y-offset>1.05</y-offset>
+        <z-offset>1.05</z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Aircraft/EC-120/Models/Interior/Instruments/helimap/helimap.xml</path>
+    <offsets>
+      <x-m>-2.18</x-m>
+      <y-m>-0.18</y-m>
+      <z-m>0.115 </z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset>1</x-offset>
+        <y-offset>1.09</y-offset>
+        <z-offset>0.95</z-offset>
+      </animation>
+    </overlay>
+  </model>
+  
+  
+  <model>
+		<name>adf1</name>
+		<path>Aircraft/EC-120/Models/Interior/Instruments/kr87-adf/kr87.xml</path>
+		<offsets>
+		 <x-m>-2.18</x-m>
+      <y-m>-0.18</y-m>
+      <z-m>0.02</z-m>
+	    <pitch-deg>0</pitch-deg>
+		</offsets>
+
+	</model>
+	
+	
+
+  <model>
+    <path>Aircraft/EC-120/Models/Interior/Instruments/GNS430/GNS430.xml</path>
+    <offsets>
+      <x-m>-2.19</x-m>
+      <y-m>0.005</y-m>
+      <z-m>-0.03 </z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset>1</x-offset>
+        <y-offset>1.05</y-offset>
+        <z-offset>1.05</z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <model>
+    <path>Aircraft/EC-120/Models/Interior/Instruments/CWS/CWS.xml</path>
+    <offsets>
+      <x-m>-2.194</x-m>
+      <y-m>0.1887</y-m>
+      <z-m>0.183 </z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset>1</x-offset>
+        <y-offset>1.1</y-offset>
+        <z-offset>1</z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!--	<model>
+		<path>Aircraft/EC-120/Models/Interior/Instruments/Turn/Turn.xml</path>
+		<offsets>
+			 <x-m>-2.312</x-m>
+       <y-m>0.314</y-m>
+      <z-m>0.33 </z-m>
+	    <pitch-deg>-14</pitch-deg>
+		</offsets>
+		 <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.1</x-offset>
+    <y-offset>0.7</y-offset>
+    <z-offset>0.7</z-offset>
+   </animation>
+  </overlay>
+	</model>
+	-->
+
+  <model>
+    <path>Aircraft/EC-120/Models/Interior/Instruments/Tach/tach.xml</path>
+    <offsets>
+      <x-m>-2.18</x-m>
+      <y-m>0.142</y-m>
+      <z-m>0.042</z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset>1</x-offset>
+        <y-offset>0.95</y-offset>
+        <z-offset>0.95</z-offset>
+      </animation>
+    </overlay>
+  </model>
+  
+  <model>
+    <path>Aircraft/EC-120/Models/Interior/Instruments/kcs55/ki525a.xml</path>
+    <offsets>
+      <x-m>-2.18</x-m>
+      <y-m>0.23</y-m>
+      <z-m>-0.0</z-m>
+      <pitch-deg>0</pitch-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset>1</x-offset>
+        <y-offset>0.95</y-offset>
+        <z-offset>0.95</z-offset>
+      </animation>
+    </overlay>
+  </model>
+  
+  
+  <model>
+		<name>nav2a</name>
+		<path>Aircraft/EC-120/Models/Interior/Instruments/kcs55/ka51b.xml</path>
+		<offsets>
+			   <x-m>-2.183</x-m>
+      <y-m>0.32</y-m>
+      <z-m>-0.07</z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>   0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+
+	</model>
+	
+
+  
+  
+  <model>
+		<name>adf2</name>
+		<path>Aircraft/EC-120/Models/Interior/Instruments/kr87-adf/ki227-00.xml</path>
+		<offsets>
+		   <x-m>-2.184</x-m>
+           <y-m>0.315</y-m>
+           <z-m>-0.02</z-m>
+      <pitch-deg>0</pitch-deg>
+		</offsets>
+		<overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>0.6</x-offset>
+    <y-offset>0.72</y-offset>
+    <z-offset>0.72</z-offset>
+   </animation>
+  </overlay>
+	</model>
+  
+  
+
+  <model>
+    <path>Aircraft/EC-120/Models/Interior/Instruments/Breakers/ELT_switch_t2.xml</path>
+    <offsets>
+      <x-m>-2.184</x-m>
+      <y-m>-0.198</y-m>
+      <z-m>0.22 </z-m>
+      <pitch-deg>-0</pitch-deg>
+    </offsets>
+    <overlay>
+      <animation n="100">
+        <type>scale</type>
+        <property>constants/zero</property>
+        <x-offset>1</x-offset>
+        <y-offset>0.8</y-offset>
+        <z-offset>0.8</z-offset>
+      </animation>
+    </overlay>
+  </model>
+
+  <!-- light knob -->
+  <animation>
+    <type>pick</type>
+    <object-name>lightsDimmer</object-name>
+    <visible>false</visible>
+    <action>
+      <name>small decrease</name>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/instrument-lights</property>
+        <step>-0.2</step>
+        <min>0</min>
+        <max>10</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>lightsBrighter</object-name>
+    <visible>false</visible>
+    <action>
+      <name>small decrease</name>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/lighting/instrument-lights</property>
+        <step>0.2</step>
+        <min>0</min>
+        <max>10</max>
+        <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- switch panel lighting-->
+  <animation>
+    <type>material</type>
+    <object-name>knobPanelBrightness</object-name>
+    <object-name>knobFloodLight</object-name>
+    <object-name>switchBatt</object-name>
+    <object-name>switchLightsTest</object-name>
+    <object-name>switchFireTest</object-name>
+    <object-name>switchFloat</object-name>
+    <object-name>switchGene</object-name>
+    <object-name>switchPump</object-name>
+    <object-name>switchPitot</object-name>
+    <object-name>switchHorn</object-name>
+    <object-name>switchWipers</object-name>
+    <object-name>switchVA_Reset</object-name>
+    <object-name>diskElectReset</object-name>
+    <object-name>switchAntiCol</object-name>
+    <object-name>switchPosLight</object-name>
+    <object-name>switchCrank</object-name>
+    <object-name>switchHYDR</object-name>
+    <condition>
+      <property>controls/lighting/instrument-lights</property>
+      <or>
+        <property>controls/electric/directbat-switch</property>
+        <property>controls/electric/engine/generator</property>
+      </or>
+    </condition>
+    <emission>
+      <red>   0.80 </red>
+      <green> 0.50 </green>
+      <blue>  0.50 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>switchBatt1</object-name>
+    <object-name>switchLightsTest1</object-name>
+    <object-name>switchFireTest1</object-name>
+    <object-name>switchFloat1</object-name>
+    <object-name>switchGene1</object-name>
+    <object-name>switchPump1</object-name>
+    <object-name>switchPitot1</object-name>
+    <object-name>switchHorn1</object-name>
+    <object-name>switchAntiCol1</object-name>
+    <object-name>switchPosLight1</object-name>
+    <emission>
+      <red>   0 </red>
+      <green> 1 </green>
+      <blue>  0 </blue>
+    </emission>
+  </animation>
+
+  <!-- centre console -->
+  <model>
+    <path>Aircraft/EC-120/Models/Interior/Instruments/kx165/kx165-1.xml</path>
+    <offsets>
+      <x-m>-2.038</x-m>
+      <y-m>0.004</y-m>
+      <z-m>-0.277 </z-m>
+      <pitch-deg>-68</pitch-deg>
+    </offsets>
+  </model>
+
+   <model>
+    <path>Aircraft/EC-120/Models/Interior/Instruments/kx165/kx165-2.xml</path>
+    <offsets>
+       <x-m>-1.99</x-m>
+      <y-m>0.004</y-m>
+      <z-m>-0.295 </z-m>
+      <pitch-deg>-68</pitch-deg>
+    </offsets>
+  </model>
+  
+  
+  
+  <model>
+    <name>gtx-327</name>
+    <path>Aircraft/EC-120/Models/Interior/Instruments/GTX327/gtx-327/gtx-327.xml</path>
+    <offsets>
+      <x-m>-1.96</x-m>
+      <y-m>0.004</y-m>
+      <z-m>-0.311 </z-m>
+      <pitch-deg>-68</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <name>nightsun</name>
+    <path>Aircraft/EC-120/Models/Interior/Instruments/nightsun/control.xml</path>
+    <offsets>
+      <x-m>-1.905</x-m>
+      <y-m>0.046</y-m>
+      <z-m>-0.3345 </z-m>
+      <pitch-deg>-68</pitch-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>nightsun</object-name>
+    <condition>
+      <equals>
+        <property>sim/multiplay/generic/string[1]</property>
+        <value>Law Enforcement</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <!-- switch unit -->
+
+  <!-- Battery -->
+  <animation>
+    <type>pick</type>
+    <object-name>switchBatt</object-name>
+    <object-name>switchBatt1</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/directbat-switch</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>switchBatt</object-name>
+    <condition>
+      <not>
+        <property>controls/electric/directbat-switch</property>
+      </not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>switchBatt1</object-name>
+    <condition>
+      <property>controls/electric/directbat-switch</property>
+    </condition>
+  </animation>
+
+  <!-- Generator -->
+  <animation>
+    <type>pick</type>
+    <object-name>switchGene</object-name>
+    <object-name>switchGene1</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/engine/generator</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>switchGene</object-name>
+    <condition>
+      <not>
+        <property>controls/electric/engine/generator</property>
+      </not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>switchGene1</object-name>
+    <condition>
+      <property>controls/electric/engine/generator</property>
+    </condition>
+  </animation>
+
+  <!-- fuel pump -->
+  <animation>
+    <type>pick</type>
+    <object-name>switchPump</object-name>
+    <object-name>switchPump1</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/fuel/transfer-pump[1]</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>switchPump</object-name>
+    <condition>
+      <not>
+        <property>controls/switches/fuel/transfer-pump[1]</property>
+      </not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>switchPump1</object-name>
+    <condition>
+      <property>controls/switches/fuel/transfer-pump[1]</property>
+    </condition>
+  </animation>
+
+  <!-- PITOT -->
+  <animation>
+    <type>pick</type>
+    <object-name>switchPitot</object-name>
+    <object-name>switchPitot1</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/anti-ice/pitot-heat</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>switchPitot</object-name>
+    <condition>
+      <not>
+        <property>controls/anti-ice/pitot-heat</property>
+      </not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>switchPitot1</object-name>
+    <condition>
+      <property>controls/anti-ice/pitot-heat</property>
+    </condition>
+  </animation>
+
+  <!-- horn -->
+  <animation>
+    <type>pick</type>
+    <object-name>switchHorn</object-name>
+    <object-name>switchHorn1</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/electric/horn</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>switchHorn</object-name>
+    <condition>
+      <not>
+        <property>controls/electric/horn</property>
+      </not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>switchHorn1</object-name>
+    <condition>
+      <property>controls/electric/horn</property>
+    </condition>
+  </animation>
+
+  <!-- Col lights -->
+  <animation>
+    <type>pick</type>
+    <object-name>switchAntiCol</object-name>
+    <object-name>switchAntiCol1</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/beacon-switch</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/strobe-switch</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>switchAntiCol</object-name>
+    <condition>
+      <not>
+        <property>controls/switches/beacon-switch</property>
+      </not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>switchAntiCol1</object-name>
+    <condition>
+      <property>controls/switches/beacon-switch</property>
+    </condition>
+  </animation>
+
+  <!-- nav lights -->
+  <animation>
+    <type>pick</type>
+    <object-name>switchPosLight</object-name>
+    <object-name>switchPosLight1</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/switches/nav-lights-switch</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/white-light-switch</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>switchPosLight</object-name>
+    <condition>
+      <not>
+        <property>controls/switches/nav-lights-switch</property>
+      </not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>switchPosLight1</object-name>
+    <condition>
+      <property>controls/switches/nav-lights-switch</property>
+    </condition>
+  </animation>
+
+  <!-- float system -->
+  <animation>
+    <type>pick</type>
+    <object-name>switchFloat</object-name>
+    <object-name>switchFloat1</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/gear/floats-armed</property>
+      </binding>
+      <binding>
+        <command>property-toggle</command>
+        <property>sim/model/sound/click</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>switchFloat</object-name>
+    <condition>
+      <not>
+        <property>controls/gear/floats-armed</property>
+      </not>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>switchFloat1</object-name>
+    <condition>
+      <property>controls/gear/floats-armed</property>
+      <equals>
+        <property>sim/multiplay/generic/string[2]</property>
+        <value>Floatation_System</value>
+      </equals>
+    </condition>
+  </animation>
+
+
+<!--  HDR panel lights -->
+
+<light>
+  <name>dash1</name>
+  <type>spot</type>
+  <position>
+    <x-m>-2.17</x-m>
+    <y-m>0.142</y-m>
+    <z-m>-0.03</z-m>
+  </position>
+  <direction>
+    <x>-1.0</x>
+    <y>0</y>
+    <z>0</z>
+  </direction>
+  <ambient>
+    <r>0</r>
+    <g>0</g>
+    <b>1</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </specular>
+    <color>
+      <r>0.8</r>
+      <g>0.5</g>
+      <b>0.5</b>
+      <a>1.0</a>
+    </color>
+ <attenuation>
+    <c>1</c>
+    <l>1.5</l>
+    <q>3.5</q>
+  </attenuation>
+  <spot-exponent>6</spot-exponent>
+  <spot-cutoff>70</spot-cutoff>
+  <range-m>0.05</range-m>
+   <intensity>0.1</intensity>
+  <dim-factor>
+    <property>controls/lighting/instrument-lights</property>
+  </dim-factor>
+ 
+</light>
+
+<light>
+  <name>dash1</name>
+  <type>spot</type>
+  <position>
+    <x-m>-2.17</x-m>
+    <y-m>0.142</y-m>
+    <z-m>0.12</z-m>
+  </position>
+  <direction>
+    <x>-1.0</x>
+    <y>0</y>
+    <z>0</z>
+  </direction>
+  <ambient>
+    <r>0</r>
+    <g>0</g>
+    <b>1</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </specular>
+    <color>
+      <r>0.8</r>
+      <g>0.5</g>
+      <b>0.5</b>
+      <a>1.0</a>
+    </color>
+ <attenuation>
+    <c>1</c>
+    <l>1.5</l>
+    <q>3.5</q>
+  </attenuation>
+  <spot-exponent>6</spot-exponent>
+  <spot-cutoff>70</spot-cutoff>
+  <range-m>0.05</range-m>
+   <intensity>0.1</intensity>
+  <dim-factor>
+    <property>controls/lighting/instrument-lights</property>
+  </dim-factor>
+ 
+</light>
+
+<light>
+  <name>dash1</name>
+  <type>spot</type>
+  <position>
+    <x-m>-2.17</x-m>
+    <y-m>0.23</y-m>
+    <z-m>0.1</z-m>
+  </position>
+  <direction>
+    <x>-1.0</x>
+    <y>0</y>
+    <z>0</z>
+  </direction>
+  <ambient>
+    <r>0</r>
+    <g>0</g>
+    <b>1</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </specular>
+    <color>
+      <r>0.8</r>
+      <g>0.5</g>
+      <b>0.5</b>
+      <a>1.0</a>
+    </color>
+ <attenuation>
+    <c>1</c>
+    <l>1.5</l>
+    <q>3.5</q>
+  </attenuation>
+  <spot-exponent>3</spot-exponent>
+  <spot-cutoff>70</spot-cutoff>
+  <range-m>0.05</range-m>
+   <intensity>0.1</intensity>
+  <dim-factor>
+    <property>controls/lighting/instrument-lights</property>
+  </dim-factor>
+ 
+</light>
+
+<light>
+  <name>dash1</name>
+  <type>spot</type>
+  <position>
+    <x-m>-2.17</x-m>
+    <y-m>0.315</y-m>
+    <z-m>0.115</z-m>
+  </position>
+  <direction>
+    <x>-1.0</x>
+    <y>0</y>
+    <z>0</z>
+  </direction>
+  <ambient>
+    <r>0</r>
+    <g>0</g>
+    <b>1</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </specular>
+    <color>
+      <r>0.8</r>
+      <g>0.5</g>
+      <b>0.5</b>
+      <a>1.0</a>
+    </color>
+ <attenuation>
+    <c>1</c>
+    <l>1.5</l>
+    <q>3.5</q>
+  </attenuation>
+  <spot-exponent>6</spot-exponent>
+  <spot-cutoff>70</spot-cutoff>
+  <range-m>0.05</range-m>
+   <intensity>0.1</intensity>
+  <dim-factor>
+    <property>controls/lighting/instrument-lights</property>
+  </dim-factor>
+ 
+</light>
+
+<light>
+  <name>dash1</name>
+  <type>spot</type>
+  <position>
+    <x-m>-2.17</x-m>
+    <y-m>0.315</y-m>
+    <z-m>0.042</z-m>
+  </position>
+  <direction>
+    <x>-1.0</x>
+    <y>0</y>
+    <z>0</z>
+  </direction>
+  <ambient>
+    <r>0</r>
+    <g>0</g>
+    <b>1</b>
+    <a>1</a>
+  </ambient>
+  <diffuse>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </diffuse>
+  <specular>
+    <r>0</r>
+    <g>1</g>
+    <b>0</b>
+    <a>1</a>
+  </specular>
+    <color>
+      <r>0.8</r>
+      <g>0.5</g>
+      <b>0.5</b>
+      <a>1.0</a>
+    </color>
+ <attenuation>
+    <c>1</c>
+    <l>1.5</l>
+    <q>3.5</q>
+  </attenuation>
+  <spot-exponent>6</spot-exponent>
+  <spot-cutoff>70</spot-cutoff>
+  <range-m>0.05</range-m>
+   <intensity>0.1</intensity>
+  <dim-factor>
+    <property>controls/lighting/instrument-lights</property>
+  </dim-factor>
+ 
+</light>
+
+<animation>
+  <type>select</type>
+  <object-name>dash1</object-name>
+		
+  <condition>
+  
+   <equals>
+    <property>controls/lighting/turn-off-lights</property>
+    <value>true</value>
+   </equals>
+  
+  </condition>
+ </animation>
+
+
+</PropertyList>

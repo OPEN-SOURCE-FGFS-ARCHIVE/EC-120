@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!-- by mhab -->
+
+<PropertyList>
+  <sim>
+      <model>
+      <livery>
+        <name type="string">Patrulla ASPA</name>
+      <texture1>liveries/PatrullaASPA/EC20-chassis.jpg</texture1>
+     <blades>liveries/common/as350b_05.jpg</blades>
+	 <blur>liveries/common/rotorblur.png</blur>      
+	 </livery>
+	  <bo105>
+	   <hdr>true</hdr>
+		<als>false</als>
+		</bo105>
+    </model>
+	<rendering>
+    <refl_correction type="string">-0.22</refl_correction>
+	<fresnel-factor>0.2</fresnel-factor>
+    </rendering>
+  </sim>
+</PropertyList>

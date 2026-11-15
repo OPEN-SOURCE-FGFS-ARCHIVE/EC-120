@@ -1,0 +1,90 @@
+<!--emergency float -->
+
+<PropertyList>
+<!-- Packed floats -->
+
+ 
+  <model>
+  <path>Aircraft/EC-120/Models/kit/Floats/long-packed.xml</path>
+  <offsets>
+  <x-m> -0.3 </x-m>
+   <y-m> -1.0 </y-m>
+   <z-m> -1.3 </z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1.5</x-offset>
+    <y-offset>1</y-offset>
+    <z-offset>1</z-offset>
+   </animation>
+  </overlay>	
+ </model>
+ 
+ <model>
+  <path>Aircraft/EC-120/Models/kit/Floats/long-packed.xml</path>
+  <offsets>
+  <x-m> -0.3 </x-m>
+   <y-m> 1.03 </y-m>
+   <z-m> -1.3 </z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+  <overlay>
+		 <animation n="100">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1.5</x-offset>
+    <y-offset>1</y-offset>
+    <z-offset>1</z-offset>
+   </animation>
+  </overlay>	
+ </model>
+ 
+ 
+ 
+
+<!-- unpacked floats -->
+ 
+ <model>
+  <path>Aircraft/EC-120/Models/kit/Floats/float_long.xml</path>
+  <offsets>
+  <x-m> -0.3 </x-m>
+   <y-m> -1.0 </y-m>
+   <z-m> -1.3 </z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+   <overlay>
+		 <animation n="102">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1.5</x-offset>
+    <y-offset>1</y-offset>
+    <z-offset>1</z-offset>
+   </animation>
+  </overlay>	
+ </model>
+ 
+ <model>
+  <path>Aircraft/EC-120/Models/kit/Floats/float_long.xml</path>
+  <offsets>
+   <x-m> -0.3 </x-m>
+   <y-m> 1.03 </y-m>
+   <z-m> -1.3 </z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+   <overlay>
+		 <animation n="101">
+    <type>scale</type>
+    <property>constants/zero</property>
+    <x-offset>1.5</x-offset>
+    <y-offset>1</y-offset>
+    <z-offset>1</z-offset>
+   </animation>
+  </overlay>	
+ </model>
+
+
+ 
+</PropertyList>

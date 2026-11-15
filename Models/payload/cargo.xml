@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+<model>
+		<name>pilot1</name>
+		<path>Aircraft/AS350/Models/People/pilot.xml</path>
+		<offsets>
+			<x-m>-3.25</x-m>
+			<y-m>0.99</y-m>
+			<z-m>0.05</z-m>
+		</offsets>
+		
+	</model>	
+<!--
+<model>
+<name>pilot2</name>
+<path>Aircraft/ec145/Models/Divers/Pilot/sar/pilots.xml</path>
+<offsets>
+<x-m> -7.8 </x-m>
+<y-m> -0.95 </y-m>
+<z-m> -0.80 </z-m>
+</offsets>
+</model>
+-->
+
+
+<!-- no bench -->
+<model>
+<path>Aircraft/AS350/Models/bench3.ac</path>
+<offsets>
+<x-m>-5</x-m>
+<y-m>0</y-m>
+<z-m>-0.8</z-m>
+</offsets>
+</model>
+
+<!-- skid steps -->
+<model>
+<path>Aircraft/AS350/Models/skidsteps.ac</path>
+<offsets>
+<x-m>-5</x-m>
+<y-m>0</y-m>
+<z-m>-0.8</z-m>
+</offsets>
+</model>
+
+<!-- mirrors -->
+<model>
+<path>Aircraft/AS350/Models/mirrors.ac</path>
+<offsets>
+<x-m>-5</x-m>
+<y-m>0</y-m>
+<z-m>-0.8</z-m>
+</offsets>
+</model>
+
+<!-- wire cutters -->
+<model>
+<path>Aircraft/AS350/Models/wirecutters.ac</path>
+<offsets>
+<x-m>-5</x-m>
+<y-m>0</y-m>
+<z-m>-0.8</z-m>
+</offsets>
+</model>
+
+
+<!-- lower winch -->
+<model>
+<path>Aircraft/AS350/Models/lowerwinch.ac</path>
+<offsets>
+<x-m>-5</x-m>
+<y-m>0</y-m>
+<z-m>-0.8</z-m>
+</offsets>
+</model>
+
+</PropertyList>

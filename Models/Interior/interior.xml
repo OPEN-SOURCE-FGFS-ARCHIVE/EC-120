@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+<path>interior.ac</path>
+	<animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>1550</max-m>
+    </animation>
+	
+	
+<!--	 <effect>
+    <inherits-from>Effects/glass</inherits-from>
+    <object-name>perspexFront</object-name>
+    <object-name>perspexStbdFrontAnimation</object-name>
+    <object-name>perspexStbRearAnimation</object-name>
+    <object-name>perspexPortFrontAnimation</object-name>
+    <object-name>perspexPortRearAnimation</object-name>
+    <object-name>perspexTop</object-name>
+  
+  </effect>
+	
+	-->
+ <!--sticks  n pedals -->
+  
+ <model>
+ <name>cyclic1</name>
+		<path>Aircraft/EC-120/Models/Interior/cyclic.xml</path>
+		<offsets>
+			  <x-m> -1.89</x-m>
+     <y-m>  0.35 </y-m>
+      <z-m>  -0.55 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+	
+	</model>
+	
+	<model>
+ <name>cyclic2</name>
+		<path>Aircraft/EC-120/Models/Interior/cyclic.xml</path>
+		<offsets>
+			  <x-m> -1.89</x-m>
+     <y-m>  -0.34 </y-m>
+      <z-m>  -0.55 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+	
+	</model>
+	
+	 <model>
+	 <name>collective1</name>
+ <name>collective</name>
+		<path>Aircraft/EC-120/Models/Interior/collective.xml</path>
+		<offsets>
+			  <x-m> -1.45</x-m>
+     <y-m>  0.075 </y-m>
+      <z-m>  -0.45 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+	
+	</model>
+	
+	 <model>
+	 <name>collective2</name>
+ <name>collective</name>
+		<path>Aircraft/EC-120/Models/Interior/collective.xml</path>
+		<offsets>
+			  <x-m> -1.45</x-m>
+     <y-m>  -0.63 </y-m>
+      <z-m>  -0.45 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+	
+	</model>
+	
+	 <model>
+ <name>pedals1</name>
+		<path>Aircraft/EC-120/Models/Interior/pedals.xml</path>
+		<offsets>
+			  <x-m> -2.3</x-m>
+     <y-m>  0.35 </y-m>
+      <z-m>  -0.65 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+	</model>
+	
+	
+		 <model>
+ <name>pedals2</name>
+		<path>Aircraft/EC-120/Models/Interior/pedals.xml</path>
+		<offsets>
+			  <x-m> -2.3</x-m>
+     <y-m>  -0.34 </y-m>
+      <z-m>  -0.65 </z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+	</model>
+	
+  
+  <!-- Main panel -->
+  
+  <model>
+  <name>panel</name>
+		<path>Aircraft/EC-120/Models/Interior/dash.xml</path>
+		<offsets>
+			  <x-m>-0.06</x-m>
+     <y-m>0</y-m>
+      <z-m>0</z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+	
+	</model>
+  
+  
+  <!-- panel vibration experiment -->
+ <animation>
+    <type>translate</type>
+    <object-name>panel</object-name>
+   <condition>
+				<greater-than>
+					<property>sim/sound/vibration</property>
+					<value>0.05</value>
+				</greater-than>
+			</condition>
+    <factor>100</factor>
+    <axis>
+      <x> 1 </x>
+      <y> -1 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>panel</object-name>
+    <property>rotors/main/vibration/longitudinal</property>
+    <factor>0.0015</factor>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+ <animation>
+    <type>translate</type>
+    <object-name>panel</object-name>
+    <property>rotors/main/vibration/lateral</property>
+    <factor>0.0025</factor>
+    <axis>
+      <x> 0 </x>
+      <y> -1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+ 
+ <model>
+  
+		<path>Aircraft/EC-120/Models/Interior/Instruments/MagCompass/magcompass.xml</path>
+		<offsets>
+			  <x-m>-2.145</x-m>
+     <y-m>0.001</y-m>
+      <z-m>0.5</z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+	
+	</model>
+	
+	<!-- Float trigger -->
+	
+	 <model>
+  <name>toggle</name>
+		<path>Aircraft/EC-120/Models/kit/Floats/Float-Switch/FloatToggle.xml</path>
+		<offsets>
+			  <x-m>-2.0</x-m>
+     <y-m>0.1</y-m>
+      <z-m>-0.3</z-m>
+      <roll-deg>      0 </roll-deg>
+      <pitch-deg>0</pitch-deg>
+      <heading-deg>   0 </heading-deg>
+		</offsets>
+	
+	</model>
+	
+	 <animation>
+        <type>select</type>
+       <object-name>toggle</object-name>
+   
+        <condition>
+	
+			
+				 <equals>
+    <property>sim/multiplay/generic/string[2]</property>
+    <value>Floatation_System</value>
+	</equals>
+	
+	
+	
+			
+			</condition>
+    </animation>
+
+
+</PropertyList>
+

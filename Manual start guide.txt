@@ -1,0 +1,25 @@
+EC-120B+ Manual start proceedure.
+
+PREPARATION
+Rotorbrake...forward / released  ( overhead )
+Fuel shut-off lever ... forward and secured ( overhead )
+Battery..ON  ( Main switch panel )
+Gen...  OFF ( Main switch panel )
+Instrument light ...as required ( Default OFF. Main switch panel )
+PITOT as required ( Main switch panel )
+Nav lights and beacons as required ( Main switch panel )
+Fuel pump ON ( Main switch panel ).
+Twist grip...Idle position ( power to 63% using Middle mouse button - hold and scroll mouse up to increase.)
+
+ENGINE START
+CPW... check GOV light is OFF
+Fuel pump.... ON (FUEL P light should be ON. Run for 30 sec before starting ! )
+GENE ... OFF ( GENE warning light should be off )
+Starter Selector... ON ( Orange long button on the site of the collective. Click to engage )
+Check parameters : Ng... increase   TOT ...below limits   Engine oil pressure ....checked
+N1 = 20% disengage starter. ( Orange long button on the site of the collective. Click again to disengage )
+When N1 > 63% you are art idle
+When N1= 63%, GENE- ON, BATTERY-OFF
+Fuel Pump ... OFF
+Warning lights... all out, exc.GENE
+Twist grip.... flight position ( power to 97%)

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>blade.ac</path>
+
+  <animation>
+    <object-name>blade</object-name>
+
+    <!-- Transparence 
+    <object-name>pblurred2</object-name>
+    <object-name>blurred2a</object-name>
+	<object-name>blurred2b</object-name>
+	<object-name>blurred2c</object-name>
+	<object-name>blurred2d</object-name>-->
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>pblurred2</object-name>
+    <object-name>blurred2a</object-name>
+	<object-name>blurred2b</object-name>
+	<object-name>blurred2c</object-name>
+	<object-name>blurred2d</object-name>
+  </animation>
+  
+  
+      <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <condition>
+            <property>sim/rendering/rembrandt/enabled</property>
+        </condition>
+		<object-name>pblurred2</object-name>
+    <object-name>blurred2a</object-name>
+	<object-name>blurred2b</object-name>
+	<object-name>blurred2c</object-name>
+	<object-name>blurred2d</object-name>
+    </effect> 
+
+  <!-- Sélection blade/blur/disc tail rotor-->
+ 
+
+  <animation>
+    <type>select</type>
+   <object-name>pblurred2</object-name>
+    <object-name>blurred2a</object-name>
+	<object-name>blurred2b</object-name>
+	<object-name>blurred2c</object-name>
+	<object-name>blurred2d</object-name>
+    <condition>
+      <and>
+        <greater-than>
+          <property>/rotors/main/rpm</property>
+          <value>150</value>
+        </greater-than>
+       
+      </and>
+    </condition>
+  </animation>
+  
+  
+   <animation>
+	<type>material</type>
+	<object-name>pblurred2</object-name>
+    <object-name>blurred2a</object-name>
+	<object-name>blurred2b</object-name>
+	<object-name>blurred2c</object-name>
+	<object-name>blurred2d</object-name>
+		<transparency>
+			<alpha-prop>rotors/main/rpm</alpha-prop>
+			<factor>0.1</factor>
+			<offset>-0.25</offset>
+			<max>0.4</max>
+		</transparency>
+		<threshold>0.001</threshold>
+    </animation>
+
+
+  <animation>
+    <type>select</type>
+    <object-name>blade</object-name>
+    <condition>
+      <less-than>
+        <property>/rotors/main/rpm</property>
+	<value>150</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <!-- Incidence de la pale -->
+  <animation>
+    <type>rotate</type>
+    <object-name>blade</object-name>
+    <property>/rotors/tail/blade/incidence-deg</property>
+    <center>
+       <x-m> 0.000 </x-m>
+       <y-m> 0.000 </y-m>
+       <z-m> 0.000 </z-m>
+    </center>
+    <axis>
+      <x> 1.000 </x>
+      <y> 0.000 </y>
+      <z> 0.000 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

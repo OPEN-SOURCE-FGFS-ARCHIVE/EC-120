@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+<model>
+<name>pilot1</name>
+<path>Aircraft/AS350/Models/People/sar/pilots.xml</path>
+<offsets>
+<x-m> -8.4 </x-m>
+<y-m>  -0.1 </y-m>
+<z-m> -0.6 </z-m>
+</offsets>
+</model>
+<!--
+<model>
+<name>pilot2</name>
+<path>Aircraft/ec145/Models/Divers/Pilot/sar/pilots.xml</path>
+<offsets>
+<x-m> -7.8 </x-m>
+<y-m> -0.95 </y-m>
+<z-m> -0.80 </z-m>
+</offsets>
+</model>
+-->
+
+
+
+</PropertyList>

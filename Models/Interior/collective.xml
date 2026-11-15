@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ 
+ 
+
+    
+    <path>collective.ac</path>
+	
+	<animation>
+    <name>CollectiveComplet</name>
+  
+    <object-name>disk.002</object-name>
+	 <object-name>floattrigger</object-name>
+	 
+	
+   <object-name>startbutton</object-name>
+    <object-name>disk</object-name>
+	 <object-name>disk.003</object-name>
+	  <object-name>rect</object-name>
+	   <object-name>rect.002</object-name>
+	    <object-name>rect.003</object-name>
+	   <object-name>disk.001</object-name>
+	   <object-name>rect.001</object-name>
+	
+  </animation>
+	
+	
+	
+	
+ 
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>CollectiveComplet</object-name>
+	
+    <property>controls/engines/engine[0]/throttle</property>
+    <factor> -20</factor>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </offsets>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  
+  
+    <animation>
+    <type>pick</type>
+    <object-name>startbutton</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+ 		  <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine/ignition</property>
+      </binding>	
+	  <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine/starter</property>
+      </binding>
+	    <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/ignition</property>
+      </binding>	
+	  <binding>
+        <command>property-toggle</command>
+        <property>controls/engines/engine[1]/starter</property>
+      </binding>
+    </action>
+  </animation>
+  
+  
+   <animation>
+    <type>pick</type>
+    <object-name>floattrigger</object-name>
+
+      <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+     <binding>
+
+        <command>nasal</command>
+
+        <script>floats.toggle_floats();</script>
+
+      </binding>
+   
+    </action>
+  </animation>
+
+</PropertyList>
+
